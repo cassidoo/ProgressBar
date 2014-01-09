@@ -1,0 +1,34 @@
+.battery
+{
+	width: 100px;
+	height: 40px;
+	border: 5px solid #000;
+	position: relative;
+}
+.battery:after
+{
+	content: '';
+	display: block;
+	width: 10px;
+	height: 20px;
+	background-color: #000;
+	position: absolute;
+	right: -12px;
+	top: 10px;
+}
+.battery .level
+{
+	height: 100%;
+}
+.battery .level.high
+{
+	background-color: #27AE60;
+}
+.battery .level.medium
+{
+	background-color: #E67E22;
+}
+.battery .level.low
+{
+	background-color: #E74C3C;
+}

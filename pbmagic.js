@@ -17,14 +17,32 @@ function pbmagic(id, type, progress, total)
  * */
 {
     var bar = document.getElementById(id);
-    //var levelBar = $('.level');
+    $("#" + id).addClass(type);
+    bar.innerHTML = '<div class="level"></div>';
+    var levelBar = $("#" + id + " .level");
+
+    var level = (progress / total) * 100;
 
     // Valid type values: "", battery
     switch(type)
     {
         case "battery":
+            levelBar.css('width', level + '%');
+            if(level > 65)
+            {
+                levelBar.addClass("high");
+            }
+            else if(level >= 35)
+            {
+                levelBar.addClass("medium");
+            }
+            else
+            {
+                levelBar.addClass("low");
+            }
+            ;
             break;
         default:
-            // I'll make a default bar that's moderately attractive
+        // I'll make a default bar that's moderately attractive
     }
 }
