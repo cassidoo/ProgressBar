@@ -16,26 +16,17 @@ function pbmagic(id, progress, total, type)
  *  total = value of 100% of the bar
  * */
 {
-    console.log(id);
-    console.log(progress);
-    console.log(total);
-    console.log(type);
-    
+
     var bar = document.getElementById(id);
 
-    if(type === null || typeof type === "undefined")
-    {
-        $("#" + id).addClass('none');
-    }
-    else
-    {
-        $("#" + id).addClass(type);
-    }
-    
+    $("#" + id).addClass(type);
+    if( typeof type === "undefined") $("#" + id).addClass('none');
+
     bar.innerHTML = '<div class="level"></div>';
     var levelBar = $("#" + id + " .level");
 
-    if(total === null || typeof total === "undefined") total = 100;
+    if( typeof total === "undefined")
+        total = 100;
     var level = (progress / total) * 100;
 
     // Valid type values: "", battery
