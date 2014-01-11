@@ -9,29 +9,33 @@
  * And make sure you have jQuery when you use this.
  * */
 
-function pbmagic(id, percent)
-{
-    pbmagic(id, 'none', percent, 100);
-    console.log(id);
-    console.log(percent);
-}
-
-function pbmagic(id, type, progress, total)
+function pbmagic(id, progress, total, type)
 /* id = the id of the bar
  *  type = type of progress bar
  *  progress = progress so far
  *  total = value of 100% of the bar
  * */
 {
-    console.log("this is the type: " + type);
+    console.log(id);
+    console.log(progress);
+    console.log(total);
+    console.log(type);
     
     var bar = document.getElementById(id);
 
-    $("#" + id).addClass(type);
+    if(type === null || typeof type === "undefined")
+    {
+        $("#" + id).addClass('none');
+    }
+    else
+    {
+        $("#" + id).addClass(type);
+    }
     
     bar.innerHTML = '<div class="level"></div>';
     var levelBar = $("#" + id + " .level");
 
+    if(total === null || typeof total === "undefined") total = 100;
     var level = (progress / total) * 100;
 
     // Valid type values: "", battery
@@ -54,7 +58,6 @@ function pbmagic(id, type, progress, total)
             ;
             break;
         default:
-            alert("asdfghjk");
             levelBar.css('width', level + '%');
     }
 }
