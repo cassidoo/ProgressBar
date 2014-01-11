@@ -3,11 +3,18 @@
 <html>
 	<head>
 		<title>Things</title>
-		
+
 		<link href='demo.css' rel='stylesheet' type='text/css'>
 		<link href='pbmagic.css' rel='stylesheet' type='text/css'>
+
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="pbmagic.js"></script>
 	</head>
 	<body>
-		<div class="battery"></div>
+		<button onclick="pbmagic('bar1', 'battery', 70, 100)"></button>
+		<div id="bar1"></div>
+		
+		<button onclick="pbmagic('bar2', 80)"></button>
+		<div id="bar2"></div>
 	</body>
 </html>

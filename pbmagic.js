@@ -9,6 +9,13 @@
  * And make sure you have jQuery when you use this.
  * */
 
+function pbmagic(id, percent)
+{
+    pbmagic(id, 'none', percent, 100);
+    console.log(id);
+    console.log(percent);
+}
+
 function pbmagic(id, type, progress, total)
 /* id = the id of the bar
  *  type = type of progress bar
@@ -16,8 +23,12 @@ function pbmagic(id, type, progress, total)
  *  total = value of 100% of the bar
  * */
 {
+    console.log("this is the type: " + type);
+    
     var bar = document.getElementById(id);
+
     $("#" + id).addClass(type);
+    
     bar.innerHTML = '<div class="level"></div>';
     var levelBar = $("#" + id + " .level");
 
@@ -43,6 +54,7 @@ function pbmagic(id, type, progress, total)
             ;
             break;
         default:
-        // I'll make a default bar that's moderately attractive
+            alert("asdfghjk");
+            levelBar.css('width', level + '%');
     }
 }
