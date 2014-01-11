@@ -20,7 +20,8 @@ function pbmagic(id, progress, total, type)
     var bar = document.getElementById(id);
 
     $("#" + id).addClass(type);
-    if( typeof type === "undefined") $("#" + id).addClass('none');
+    if( typeof type === "undefined")
+        $("#" + id).addClass('none');
 
     bar.innerHTML = '<div class="level"></div>';
     var levelBar = $("#" + id + " .level");
@@ -48,6 +49,10 @@ function pbmagic(id, progress, total, type)
             }
             ;
             break;
+        case "pill":
+            levelBar.css('width', level + '%');
+        case "shinypill":
+            levelBar.css('width', level + '%');
         default:
             levelBar.css('width', level + '%');
     }
