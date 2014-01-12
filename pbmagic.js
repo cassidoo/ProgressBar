@@ -53,6 +53,8 @@ function pbmagic(id, progress, total, type)
             levelBar.css('width', level + '%');
         case "shinypill":
             levelBar.css('width', level + '%');
+        case "skinny":
+            levelBar.css('width', level + '%');
         default:
             levelBar.css('width', level + '%');
     }

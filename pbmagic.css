@@ -118,3 +118,35 @@
 	background: linear-gradient(to bottom, rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
 }
+
+.skinny
+{
+	height: 6px;
+	width: 300px;
+	position: relative;
+	background: rgb(28,28,28); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(28,28,28,1) 0%, rgba(69,72,77,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(28,28,28,1)), color-stop(100%,rgba(69,72,77,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(28,28,28,1) 0%,rgba(69,72,77,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(28,28,28,1) 0%,rgba(69,72,77,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(28,28,28,1) 0%,rgba(69,72,77,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(28,28,28,1) 0%,rgba(69,72,77,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c1c1c', endColorstr='#45484d',GradientType=0 ); /* IE6-9 */
+}
+
+.skinny .level
+{
+	display: block;
+	height: 100%;
+	background-color: #a900b8;
+	background: -moz-linear-gradient(left, rgba(169,0,184,1) 0%, rgba(211,0,186,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(169,0,184,1)), color-stop(100%,rgba(211,0,186,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(169,0,184,1) 0%,rgba(211,0,186,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(169,0,184,1) 0%,rgba(211,0,186,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, rgba(169,0,184,1) 0%,rgba(211,0,186,1) 100%); /* IE10+ */
+	background: linear-gradient(to right, rgba(169,0,184,1) 0%,rgba(211,0,186,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a900b8', endColorstr='#d300ba',GradientType=1 ); /* IE6-9 */
+	-moz-box-shadow: 0px 0px 5px #a900b8;
+	-webkit-box-shadow: 0px 0px 5px #a900b8;
+	box-shadow: 0px 0px 5px #a900b8;
+}
