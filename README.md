@@ -20,4 +20,5 @@ So far, there are 5 styles of bars that people can use:
 * Pill
 * Shiny Pill (I'm really creative with names)
 * Skinny
+* Pie
 
